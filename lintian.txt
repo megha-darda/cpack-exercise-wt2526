@@ -1,0 +1,19 @@
+-- Before
+lintian ./cpackexample_0.1.0_amd64.deb
+running with root privileges is not recommended!
+E: cpackexample: description-synopsis-is-duplicated line 1
+E: cpackexample: malformed-contact Maintainer Megha
+E: cpackexample: no-changelog usr/share/doc/cpackexample/changelog.gz (native package)
+E: cpackexample: no-copyright-file
+E: cpackexample: unstripped-binary-or-object [usr/bin/cpackexample]
+W: cpackexample: no-manual-page [usr/bin/cpackexample]
+
+
+
+-- After
+lintian ./cpackexample_0.1.0_amd64.deb
+running with root privileges is not recommended!
+E: cpackexample: no-changelog usr/share/doc/cpackexample/changelog.gz (native package)
+E: cpackexample: no-copyright-file
+W: cpackexample: no-manual-page [usr/bin/cpackexample]
+root@799880555f08:/mnt/cpack-exercise/build# 
